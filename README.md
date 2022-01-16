@@ -3,5 +3,5 @@ powershell scripts
 
 ## how to run
 ```ps1
-iwr pmh.codes/ps/rick | iex
+iwr pmh.codes/ps/list | iex
 ```
