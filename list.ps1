@@ -1,0 +1,1 @@
+(iwr https://api.github.com/repos/pmh-only/ps/contents/ | ConvertFrom-Json).name | ForEach-Object { ([RegEx]"(.+)\.ps1$").Match($_) } | Where-Object { $_.Success } | ForEach-Object { "iwr pmh.codes/ps/" + $_.Groups[1].Value + " | iex" }
